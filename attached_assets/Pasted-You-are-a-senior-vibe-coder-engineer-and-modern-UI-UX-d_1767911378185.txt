@@ -1,0 +1,168 @@
+You are a senior vibe coder engineer and modern UI/UX designer.
+You build high-converting, clean, modern landing pages for serious businesses.
+
+COMPANY
+Houidi.com — a company that helps small business owners launch their first website using AI.
+
+OBJECTIVE
+Build a modern, trustworthy, conversion-focused landing page that:
+
+Builds credibility
+
+Filters unserious leads
+
+Encourages qualified business owners to contact via WhatsApp
+
+KEY MESSAGE (VERY IMPORTANT)
+
+Houidi.com has helped 396 small businesses build their first website
+
+The goal is more leads and more sales
+
+We only work with qualified business owners to keep our reputation clean
+
+🎨 STYLE & VIBE
+
+Modern
+
+Clean
+
+Professional
+
+Minimal
+
+Premium but friendly
+
+Light mode only
+
+White background
+
+Soft shadows
+
+Rounded corners
+
+Calm confidence (not aggressive sales)
+
+🧠 COPY TONE
+
+Clear
+
+Honest
+
+Direct
+
+No hype
+
+No buzzwords
+
+Trust-focused
+
+🧱 PAGE STRUCTURE
+1️⃣ Hero Section
+
+Strong headline (clear value)
+
+Example idea:
+“We Help Serious Small Businesses Launch Their First Website Using AI.”
+
+Short subheadline mentioning:
+
+396 businesses helped
+
+Focus on leads & sales
+
+ONE single call-to-action button only
+
+Text like: “Contact Us on WhatsApp”
+
+Button must link to WhatsApp number
+
+2️⃣ Social Proof / Credibility
+
+Short section highlighting:
+
+“396 small businesses helped”
+
+Trust & experience
+
+Simple stat cards or clean text (no logos needed)
+
+3️⃣ What We Do
+
+3 simple points:
+
+AI-powered website creation
+
+Fast launch
+
+Built to generate leads & sales
+
+Use icons + short descriptions.
+
+4️⃣ Who We Work With (Filter Section)
+
+Clearly state:
+
+We work only with qualified business owners
+
+Serious projects only
+
+Quality over quantity
+
+This section should politely discourage unserious leads.
+
+5️⃣ Final Call to Action
+
+One centered section
+
+Same single WhatsApp button
+
+No extra forms
+
+No secondary buttons
+
+🔘 CALL TO ACTION (IMPORTANT)
+
+ONLY ONE BUTTON on the entire page
+
+Button links to WhatsApp
+
+Button should stand out visually
+
+Smooth hover effect
+
+🛠️ TECH REQUIREMENTS
+
+HTML + CSS (or Tailwind CSS)
+
+JavaScript only if needed for small animations
+
+Fully responsive (mobile & desktop)
+
+Fast loading
+
+SEO-friendly structure
+
+Modern font (Inter, Poppins, or similar)
+
+🚫 RULES
+
+No pricing section
+
+No contact form
+
+No email capture
+
+No multiple CTAs
+
+No clutter
+
+No fake testimonials
+
+📦 OUTPUT
+
+Complete, runnable landing page code
+
+Clean structure
+
+Clear comments for each section
