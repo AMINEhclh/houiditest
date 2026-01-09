@@ -1,7 +1,7 @@
 [build]
-base = "client"
-command = "npm run build"
-publish = "dist"
+base = ""            # optional: remove or set to repo root
+publish = "dist/public"
+command = "npm run build"   # adjust if needed
 
 [[redirects]]
 from = "/*"
