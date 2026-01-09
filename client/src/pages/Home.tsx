@@ -3,8 +3,31 @@ import { FeatureCard } from "@/components/FeatureCard";
 import { StatCard } from "@/components/StatCard";
 import { Rocket, Zap, TrendingUp, CheckCircle, ShieldCheck, Clock } from "lucide-react";
 import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (audioRef.current) {
+        audioRef.current.play().catch(() => {
+          // Fallback: If autoplay fails, we could try to play on next user interaction
+          const playOnInteraction = () => {
+            if (audioRef.current) {
+              audioRef.current.play().catch(() => {});
+            }
+            window.removeEventListener('click', playOnInteraction);
+            window.removeEventListener('touchstart', playOnInteraction);
+          };
+          window.addEventListener('click', playOnInteraction);
+          window.addEventListener('touchstart', playOnInteraction);
+        });
+      }
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const features = [
     {
       icon: Rocket,
@@ -25,6 +48,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background font-sans overflow-x-hidden selection:bg-primary/10">
+      <audio ref={audioRef} src="https://assets.mixkit.co/active_storage/sfx/2358/2358-preview.mp3" preload="auto" />
       {/* Navigation / Header - Minimal */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -61,7 +85,7 @@ export default function Home() {
               </h1>
               
               <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-10 text-balance leading-relaxed">
-                Helped 396 businesses generate more leads & sales with AI-powered simplicity. No fluff. Just results.
+                Helped 33+ businesses generate more leads & sales with AI-powered simplicity. No fluff. Just results.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -79,8 +103,8 @@ export default function Home() {
         <section className="py-16 border-y border-border/40 bg-secondary/10">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-border/50">
-              <StatCard index={0} value="396+" label="Businesses Helped" />
-              <StatCard index={1} value="$2M+" label="Client Revenue Generated" />
+              <StatCard index={0} value="33+" label="Businesses Helped" />
+              <StatCard index={1} value="$600k" label="Client Revenue Generated" />
               <StatCard index={2} value="100%" label="Satisfaction Guarantee" />
             </div>
           </div>

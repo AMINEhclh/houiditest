@@ -1,6 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { useEffect, useState, useRef } from "react";
 
 interface WhatsAppButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
@@ -14,8 +15,8 @@ export function WhatsAppButton({
   text = "Contact Us on WhatsApp",
   ...props 
 }: WhatsAppButtonProps) {
-  const phoneNumber = "1234567890"; // Placeholder as requested
-  const message = encodeURIComponent("Hi, I'm interested in launching a website for my business.");
+  const phoneNumber = "21658444315";
+  const message = encodeURIComponent("Hi Houidi, I'm interested in launching my website with AI. Can we talk?");
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   const sizeClasses = {
@@ -23,6 +24,15 @@ export function WhatsAppButton({
     lg: "px-8 py-4 text-lg",
     xl: "px-10 py-5 text-xl w-full sm:w-auto",
   };
+
+  const [showDot, setShowDot] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowDot(true);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <motion.a
@@ -45,19 +55,28 @@ export function WhatsAppButton({
         size === "xl" ? "w-7 h-7" : "w-5 h-5"
       )} />
       <span>{text}</span>
-      <div className={cn(
-        "absolute bg-red-600 rounded-full flex items-center justify-center border-2 border-background ring-1 ring-red-600/20 shadow-lg",
-        size === "default" && "-top-1 -right-1 w-5 h-5",
-        size === "lg" && "-top-1.5 -right-1.5 w-6 h-6",
-        size === "xl" && "-top-2 -right-2 w-8 h-8"
-      )}>
+      <motion.div 
+        initial={{ scale: 0, opacity: 0 }}
+        animate={showDot ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
+        transition={{ 
+          type: "spring", 
+          stiffness: 260, 
+          damping: 20
+        }}
+        className={cn(
+          "absolute bg-red-600 rounded-full flex items-center justify-center border-2 border-background ring-1 ring-red-600/20 shadow-lg",
+          size === "default" && "-top-1 -right-1 w-5 h-5",
+          size === "lg" && "-top-1.5 -right-1.5 w-6 h-6",
+          size === "xl" && "-top-2 -right-2 w-8 h-8"
+        )}
+      >
         <span className={cn(
           "font-bold text-white leading-none",
           size === "default" && "text-[10px]",
           size === "lg" && "text-[11px]",
           size === "xl" && "text-sm"
         )}>1</span>
-      </div>
+      </motion.div>
     </motion.a>
   );
 }
