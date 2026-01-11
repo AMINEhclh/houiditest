@@ -104,7 +104,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-border/50">
               <StatCard index={0} value="33+" label="Businesses Helped" />
-              <StatCard index={1} value="$600k" label="Client Revenue Generated" />
+              <StatCard index={1} value="+600k TND" label="Client Revenue Generated" />
               <StatCard index={2} value="100%" label="Satisfaction Guarantee" />
             </div>
           </div>
