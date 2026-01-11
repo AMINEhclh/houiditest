@@ -48,7 +48,7 @@
 
 @layer utilities {
   .text-balance {
-    text-wrap: balance;
+    @apply [text-wrap:balance];
   }
   
   .glass-card {
@@ -57,5 +57,13 @@
 
   .dark-wash {
     @apply relative after:absolute after:inset-0 after:bg-background/60 after:z-[-1];
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
