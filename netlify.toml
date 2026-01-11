@@ -7,3 +7,6 @@ command = "npm run build"   # adjust if needed
 from = "/*"
 to = "/index.html"
 status = 200
+
+[build.environment]
+NETLIFY_NEXT_PLUGIN_SKIP = "true"
