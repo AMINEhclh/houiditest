@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Dark Mode Palette by default as per user request */
+  --background: 222 47% 11%;
+  --foreground: 213 31% 91%;
+  
+  --primary: 142 70% 35%;        /* WhatsApp Green */
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 222 47% 15%;      /* Slightly lighter background */
+  --secondary-foreground: 213 31% 91%;
+  
+  --muted: 223 47% 20%;
+  --muted-foreground: 215 20% 65%;
+  
+  --accent: 216 34% 17%;
+  --accent-foreground: 210 40% 98%;
+  
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217 33% 20%;
+  --input: 217 33% 20%;
+  --ring: 142 70% 35%;
+  
+  --radius: 0.75rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    @apply [text-wrap:balance];
+  }
+  
+  .glass-card {
+    @apply bg-secondary/50 backdrop-blur-md border border-white/5 shadow-2xl;
+  }
+
+  .dark-wash {
+    @apply relative after:absolute after:inset-0 after:bg-background/60 after:z-[-1];
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
