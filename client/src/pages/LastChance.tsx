@@ -18,7 +18,7 @@ import avatar8 from "@assets/stock_images/professional_busines_fc187bf4.jpg";
 import avatar9 from "@assets/stock_images/professional_busines_081b7ea4.jpg";
 import avatar10 from "@assets/stock_images/professional_busines_2be5c3c4.jpg";
 
-export default function Home() {
+export default function LastChance() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [hasChangedCTA, setHasChangedCTA] = useState(false);
   const [shouldAnimateCTA, setShouldAnimateCTA] = useState(false);
@@ -62,7 +62,7 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [hasChangedCTA, isMobile]);
 
-  const ctaText = hasChangedCTA ? "Let’s Talk" : "Free Consultation";
+  const ctaText = hasChangedCTA ? "Let’s Talk" : "Get My Business Plan";
 
   useEffect(() => {
     const playNotification = () => {
@@ -251,18 +251,16 @@ export default function Home() {
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground text-balance mb-6 md:mb-8 leading-[1.1]">
-                We Build <span className="text-primary relative inline-block">
-                  High-Converting
+                Based on Your Answers, Your Business Is <span className="text-primary relative inline-block">
+                  Missing Online
                   <svg className="absolute w-full h-2 md:h-3 -bottom-1 left-0 text-primary/20" viewBox="0 0 100 10" preserveAspectRatio="none">
                     <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
                   </svg>
-                </span> Websites for Serious Small Businesses.
+                </span> Opportunities.
               </h1>
               
-              <p className="text-lg md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-10 text-balance leading-relaxed">
-                We design fast, conversion-focused websites that help small businesses get more leads and sales.
-              </p>
-              
+              <p className="text-lg md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-10 text-balance leading-relaxed">Based on your answers, we identified clear gaps and opportunities. The next step is fixing them the right way.</p>
+
               <div className="flex items-center justify-center gap-3 mb-8 md:mb-10">
                 <div className="flex -space-x-2">
                   {[
@@ -282,10 +280,35 @@ export default function Home() {
                 </div>
                 <span className="text-xs md:text-sm font-bold text-muted-foreground whitespace-nowrap uppercase tracking-wider">Trusted by 300+ businesses</span>
               </div>
+
+              <div className="max-w-xl mx-auto mb-10 md:mb-12">
+                <div className="bg-primary/5 border border-primary/10 rounded-2xl p-6 md:p-8">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                    <div className="flex items-center gap-3 justify-center md:justify-start">
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                        <CheckCircle className="w-4 h-4" />
+                      </div>
+                      <span className="text-sm font-bold text-foreground">Quiz completed</span>
+                    </div>
+                    <div className="flex items-center gap-3 justify-center md:justify-start">
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                        <TrendingUp className="w-4 h-4" />
+                      </div>
+                      <span className="text-sm font-bold text-foreground">Analysis generated</span>
+                    </div>
+                    <div className="flex items-center gap-3 justify-center md:justify-start">
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                        <Zap className="w-4 h-4" />
+                      </div>
+                      <span className="text-sm font-bold text-foreground">Strategy call next</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
               
               <div id="hero-cta-section" className="flex flex-col items-center gap-4">
                 <div className="flex flex-col items-center gap-3 w-full max-w-sm mx-auto">
-                  <WhatsAppButton size="xl" className="w-full sm:w-auto" />
+                  <WhatsAppButton size="xl" text="Get My Business Plan" className="w-full sm:w-auto" />
                   <p className="text-xs md:text-sm text-muted-foreground font-medium bg-secondary/30 px-4 py-1.5 rounded-full">
                     Free · No commitment · 10–15 min chat
                   </p>
@@ -303,9 +326,9 @@ export default function Home() {
         <section className="py-12 md:py-16 border-y border-border/40 bg-secondary/10 px-4 md:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 divide-y md:divide-y-0 md:divide-x divide-border/30">
-              <StatCard index={0} value="300+" label="Small Businesses Launched & Scaled" />
+              <StatCard index={0} value="300+" label="Businesses Transformed After Similar Analysis" />
               <div className="pt-6 md:pt-0">
-                <StatCard index={1} value="$500k+" label="Revenue Generated for Clients" />
+                <StatCard index={1} value="$500k+" label="Revenue Generated Using Our Systems" />
               </div>
               <div className="pt-6 md:pt-0">
                 <StatCard index={2} value="100%" label="Satisfaction — Or We Fix It" />
@@ -319,7 +342,7 @@ export default function Home() {
         <section className="py-20 md:py-24 px-4 md:px-6 bg-background">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20 text-foreground">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">Why Serious Owners Choose Us</h2>
+              <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">Businesses Like Yours Need A System That Converts Visitors Into Customers.</h2>
               <p className="text-base md:text-lg text-muted-foreground">
                 We don't build "art projects". We build business assets designed to grow your bottom line.
               </p>
@@ -462,12 +485,12 @@ export default function Home() {
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Ready to Grow Your Business Online ?</h2>
-              <p className="text-xl text-muted-foreground mb-10 max-w-xl mx-auto">Let’s build a website that actually brings customers.</p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Ready to Fix What’s Holding Your Business Back?</h2>
+              <p className="text-xl text-muted-foreground mb-10 max-w-xl mx-auto">We already analyzed your business. Now let’s turn that insight into real growth.</p>
               
               <div className="flex flex-col items-center gap-4">
                 <div className="flex flex-col items-center gap-2">
-                  <WhatsAppButton size="xl" />
+                  <WhatsAppButton size="xl" text="Get My Business Plan" />
                   <p className="text-sm text-muted-foreground font-medium">
                     Free · No commitment · 10–15 min chat
                   </p>
