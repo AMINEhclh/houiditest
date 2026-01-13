@@ -263,24 +263,15 @@ export default function Home() {
                 We design fast, conversion-focused websites that help small businesses get more leads and sales.
               </p>
               
-              <div className="flex items-center justify-center gap-3 mb-8 md:mb-10">
-                <div className="flex -space-x-2">
-                  {[
-                    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100&h=100",
-                    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100&h=100",
-                    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100&h=100",
-                    "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=100&h=100"
-                  ].map((src, i) => (
-                    <div key={i} className="w-7 h-7 md:w-8 md:h-8 rounded-full border-2 border-[#0a0a0a] overflow-hidden bg-white/10 shrink-0">
-                      <img 
-                        src={src} 
-                        alt="Customer" 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  ))}
+              <div className="flex items-center justify-center gap-2 mb-8 md:mb-10">
+                <div className="flex items-center gap-0.5 text-yellow-500">
+                  <Star className="w-3.5 h-3.5 md:w-4 md:h-4 fill-current" />
+                  <Star className="w-3.5 h-3.5 md:w-4 md:h-4 fill-current" />
+                  <Star className="w-3.5 h-3.5 md:w-4 md:h-4 fill-current" />
+                  <Star className="w-3.5 h-3.5 md:w-4 md:h-4 fill-current" />
+                  <Star className="w-3.5 h-3.5 md:w-4 md:h-4 fill-current" />
                 </div>
-                <span className="text-xs md:text-sm font-bold text-muted-foreground whitespace-nowrap uppercase tracking-wider">Trusted by 300+ businesses</span>
+                <span className="text-xs md:text-sm font-medium text-muted-foreground">Rated by business owners</span>
               </div>
               
               <div id="hero-cta-section" className="flex flex-col items-center gap-4">
@@ -303,9 +294,9 @@ export default function Home() {
         <section className="py-12 md:py-16 border-y border-border/40 bg-secondary/10 px-4 md:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 divide-y md:divide-y-0 md:divide-x divide-border/30">
-              <StatCard index={0} value="300+" label="Small Businesses Launched & Scaled" />
+              <StatCard index={0} value="33+" label="Small Businesses Launched & Scaled" />
               <div className="pt-6 md:pt-0">
-                <StatCard index={1} value="$500k+" label="Revenue Generated for Clients" />
+                <StatCard index={1} value="600k TND" label="Revenue Generated for Clients" />
               </div>
               <div className="pt-6 md:pt-0">
                 <StatCard index={2} value="100%" label="Satisfaction — Or We Fix It" />
@@ -382,13 +373,13 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <p className="text-primary font-bold tracking-widest uppercase text-sm mb-2">
+              <p className="text-primary font-semibold tracking-wide uppercase text-sm mb-4">
                 We don’t work with everyone
               </p>
-              <p className="text-primary font-bold tracking-widest uppercase text-sm mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Is This For You?</h2>
+              <p className="text-lg text-muted-foreground">
                 We maintain high standards to ensure every client gets our best work.
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold mt-[30px] mb-[30px]">Is This For You?</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -472,20 +463,10 @@ export default function Home() {
                     Free · No commitment · 10–15 min chat
                   </p>
                 </div>
-                <motion.div 
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: [0.4, 1, 0.4] }}
-                  transition={{ 
-                    duration: 0.8, 
-                    repeat: Infinity, 
-                    times: [0, 0.5, 1],
-                    ease: "easeInOut"
-                  }}
-                  className="flex items-center gap-2 text-sm text-muted-foreground mt-4"
-                >
+                <div className="flex items-center gap-2 text-sm text-muted-foreground mt-4">
                   <Clock className="w-4 h-4" />
                   <span>Limited spots available for {new Date().toLocaleString('default', { month: 'long' })}</span>
-                </motion.div>
+                </div>
               </div>
             </motion.div>
           </div>
