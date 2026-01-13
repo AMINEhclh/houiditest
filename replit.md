@@ -21,13 +21,6 @@ Preferred communication style: Simple, everyday language.
 - **Animations**: Framer Motion for scroll animations and entry effects
 - **Build Tool**: Vite with path aliases (`@/` for client/src, `@shared/` for shared)
 
-### Backend Architecture
-- **Runtime**: Node.js with Express
-- **Language**: TypeScript (ESM modules)
-- **API Pattern**: RESTful endpoints defined in `shared/routes.ts`
-- **Database ORM**: Drizzle ORM with PostgreSQL dialect
-- **Schema Validation**: Zod with drizzle-zod integration
-
 ### Project Structure
 ```
 ├── client/           # React frontend
